@@ -34,6 +34,7 @@ namespace XplatCollect
             containerRegistry.RegisterForNavigation<ProfilePage>();
             containerRegistry.RegisterForNavigation<NewCollectionPage>();
             containerRegistry.RegisterForNavigation<CollectionPage>();
+            containerRegistry.RegisterForNavigation<NewProfilePage>();
 
             containerRegistry.Register<IDataBaseService<Collection>, DataBaseService<Collection>>();
             containerRegistry.Register<IDataBaseService<Person>, DataBaseService<Person>>();

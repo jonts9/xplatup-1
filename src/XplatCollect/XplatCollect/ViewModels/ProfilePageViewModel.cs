@@ -8,6 +8,7 @@ using Prism.Navigation;
 using Prism.Services;
 using XplatCollect.Models;
 using XplatCollect.Services;
+using XplatCollect.Views;
 
 namespace XplatCollect.ViewModels
 {
@@ -105,15 +106,17 @@ namespace XplatCollect.ViewModels
             // Explorar inclusão de informações
 
 
-            await ExecuteBusyAction(async () =>
-            {
-                var person = Person.Create("Zé das couves"
-                    , "Nascido nos Estados Unidos do Brasil e é uma das relíquias do Brasil.Ele encontrou a fonte da juventude passando pelo portal mágico da Pedreira Paulo Leminski", "https://www.mantelligence.com/wp-content/uploads/2017/10/Questions-To-Ask-Smile-or-eyes.jpg");
+            //await ExecuteBusyAction(async () =>
+            //{
+            //    var person = Person.Create("Zé das couves"
+            //        , "Nascido nos Estados Unidos do Brasil e é uma das relíquias do Brasil.Ele encontrou a fonte da juventude passando pelo portal mágico da Pedreira Paulo Leminski", "https://www.mantelligence.com/wp-content/uploads/2017/10/Questions-To-Ask-Smile-or-eyes.jpg");
 
-                personService.Add(person);
+            //    personService.Add(person);
 
-                LoadPerson();
-            });
+            //    LoadPerson();
+            //});
+
+            await navigationService.NavigateAsync($"{nameof(NewProfilePage)}");
         }
     }
 }
